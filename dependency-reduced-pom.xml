@@ -60,7 +60,7 @@
             <configuration>
               <transformers>
                 <transformer>
-                  <mainClass>com.microservice.App</mainClass>
+                  <mainClass>com.microservice.backupagent.App</mainClass>
                 </transformer>
               </transformers>
             </configuration>

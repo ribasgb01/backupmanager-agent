@@ -1,4 +1,4 @@
-package com.microservice;
+package com.microservice.backupagent;
 
 /**
  * Hello world!
