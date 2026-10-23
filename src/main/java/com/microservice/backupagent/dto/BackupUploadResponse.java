@@ -2,7 +2,7 @@ package com.microservice.backupagent.dto;
 
 import java.util.UUID;
 
-public record BackupUploadRequest (
+public record BackupUploadResponse(
         String uploadUrl,
         UUID backupId
 ){}

@@ -1,4 +1,9 @@
 package com.microservice.backupagent.dto;
 
-public class CompleteBackupRequest {
-}
+import java.util.UUID;
+
+public record CompleteBackupRequest(
+        String status,
+        String fileHashMd5,
+        String errorMessage
+){}

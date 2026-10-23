@@ -57,6 +57,39 @@ public class AgentConfig {
         if (serverUrl == null || serverUrl.isBlank() || apiKey == null || apiKey.isBlank() || dbPath == null || dbPath.isBlank()){
             throw new IllegalStateException("Erro: server.url, server.api-key e db.path são obrigatórios no agent.properties");
         }
+
+    }
+
+    public String getServerUrl() {
+        return serverUrl;
+    }
+
+    public String getApiKey() {
+        return apiKey;
+    }
+
+    public String getDbHost() {
+        return dbHost;
+    }
+
+    public int getDbPort() {
+        return dbPort;
+    }
+
+    public String getDbPath() {
+        return dbPath;
+    }
+
+    public String getDbUser() {
+        return dbUser;
+    }
+
+    public String getDbPassword() {
+        return dbPassword;
+    }
+
+    public String getTempDir() {
+        return tempDir;
     }
 
     public AgentConfig(){
