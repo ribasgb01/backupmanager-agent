@@ -15,7 +15,6 @@ import java.time.format.DateTimeFormatter;
 public class FirebirdDumper {
 
     private final AgentConfig config;
-
     private static final Logger log = LoggerFactory.getLogger(FirebirdDumper.class);
 
     public FirebirdDumper(AgentConfig config){
