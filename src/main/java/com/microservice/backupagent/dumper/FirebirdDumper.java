@@ -16,7 +16,7 @@ public class FirebirdDumper {
 
     private final AgentConfig config;
 
-    public static final Logger log = LoggerFactory.getLogger(FirebirdDumper.class);
+    private static final Logger log = LoggerFactory.getLogger(FirebirdDumper.class);
 
     public FirebirdDumper(AgentConfig config){
         this.config = config;
@@ -65,9 +65,12 @@ public class FirebirdDumper {
 
 
         } catch (IOException e){
+            log.error("Erro ao executar o gbak.", e);
             throw new IllegalStateException("Erro ao executar o gbak.", e);
+
         } catch (InterruptedException e){
             Thread.currentThread().interrupt();
+            log.error("Execução do gbak foi interrompida.", e);
             throw new IllegalStateException("Execução do gbak foi interrompida.", e);
         }
     }
