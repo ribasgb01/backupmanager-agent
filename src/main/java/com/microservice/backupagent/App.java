@@ -9,7 +9,20 @@ import com.microservice.backupagent.orchestrator.BackupOrchestrator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.File;
+
 public class App {
+
+    static {
+        try {
+            File jarPath = new File(App.class.getProtectionDomain().getCodeSource().getLocation().toURI());
+            File jarDir = jarPath.getParentFile();
+
+            System.setProperty("LOG_DIR", new File(jarDir, "logs").getAbsolutePath());
+        } catch (Exception e) {
+            System.setProperty("LOG_DIR", "logs");
+        }
+    }
 
     private static final Logger log = LoggerFactory.getLogger(App.class);
 
